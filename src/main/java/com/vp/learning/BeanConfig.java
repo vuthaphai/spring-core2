@@ -18,8 +18,8 @@ public class BeanConfig {
 //        return new ThaiGreetingService();
     }
 
-    @Bean(autowire = Autowire.BY_TYPE)
-//    @Bean
+//    @Bean(autowire = Autowire.BY_TYPE)
+    @Bean
     public GreetingClient greetingClient() {
         return new GreetingClient();
     }
