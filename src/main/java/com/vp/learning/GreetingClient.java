@@ -4,14 +4,16 @@ import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
-//@Setter
+//@Component
+@Setter
 public class GreetingClient {
 
-    @Autowired
+//    @Autowired
     private GreetingService greetingService;
 
-
+//    public void setGreetingService(GreetingService greetingService) {
+//        this.greetingService = greetingService;
+//    }
 
     public void greet(){
         this.greetingService.sayHello();
