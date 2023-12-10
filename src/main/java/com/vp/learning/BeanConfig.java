@@ -11,16 +11,38 @@ import org.springframework.context.annotation.Import;
 @ComponentScan("com.vp.learning")
 public class BeanConfig {
 
-    @Bean
-    public GreetingService getGreetingService(){
+//    @Bean
+//    public GreetingService getGreetingService(){
+//
+//        return new KhmerGreetingService();
+////        return new ThaiGreetingService();
+//    }
+//
+////    @Bean(autowire = Autowire.BY_TYPE)
+//    @Bean
+//    public GreetingClient greetingClient() {
+//        return new GreetingClient();
+//    }
 
-        return new KhmerGreetingService();
+//    @Bean
+//    KhmerGreetingService khmerGreetingService(){
+//        return new KhmerGreetingService();
+//    }
+//
+//    @Bean
+//    ThaiGreetingService thaiGreetingService(){
 //        return new ThaiGreetingService();
+//    }
+
+    @Bean
+    GreetingService khmerGreetingService(){
+        return new KhmerGreetingService();
     }
 
-//    @Bean(autowire = Autowire.BY_TYPE)
     @Bean
-    public GreetingClient greetingClient() {
-        return new GreetingClient();
+    GreetingService thaiGreetingService(){
+        return new ThaiGreetingService();
     }
+
+
 }
