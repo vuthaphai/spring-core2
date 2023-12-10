@@ -9,13 +9,13 @@ public class Main {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
 
-//        GreetingClient greetingClient = context.getBean(GreetingClient.class);
-//        greetingClient.greet();
+        GreetingClient greetingClient = context.getBean(GreetingClient.class);
+        greetingClient.greet();
 
-        BeanConfig2 beanConfig2 = context.getBean(BeanConfig2.class);
+//        BeanConfig2 beanConfig2 = context.getBean(BeanConfig2.class);
 
-        List<Integer> score = context.getBean(List.class);
-        System.out.println(score);
+//        List<Integer> score = context.getBean(List.class);
+//        System.out.println(score);
 
 
     }
